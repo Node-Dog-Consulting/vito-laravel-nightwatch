@@ -73,7 +73,7 @@ class Enable extends Action
             fi
         ");
 
-        $command = "cd {$site->path} && {$phpPath} artisan nightwatch:agent --listen-on=127.0.0.1:{$port}";
+        $command = "{$phpPath} artisan nightwatch:agent --listen-on=127.0.0.1:{$port}";
 
         app(CreateWorker::class)->create(
             $site->server,
